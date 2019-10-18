@@ -4,7 +4,10 @@ import {
   ADD_VIDEO,
   NEXT_VIDEO,
   SELECT_PLAYLIST,
-  SELECT_VIDEO
+  SELECT_VIDEO,
+  SET_ARTIST,
+  SET_TITLE,
+  SET_URL
 } from "./types";
 
 export default (state = initialState, { type, payload }) => {
@@ -45,6 +48,18 @@ export default (state = initialState, { type, payload }) => {
 
     case SELECT_PLAYLIST: {
       return { ...state, currentPlaylist: payload, currentVideo: 0 };
+    }
+
+    case SET_ARTIST: {
+      return { ...state, form: { ...state.form, artist: payload } };
+    }
+
+    case SET_TITLE: {
+      return { ...state, form: { ...state.form, title: payload } };
+    }
+
+    case SET_URL: {
+      return { ...state, form: { ...state.form, url: payload } };
     }
 
     default:

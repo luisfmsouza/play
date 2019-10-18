@@ -3,7 +3,10 @@ import {
   ADD_VIDEO,
   NEXT_VIDEO,
   SELECT_PLAYLIST,
-  SELECT_VIDEO
+  SELECT_VIDEO,
+  SET_ARTIST,
+  SET_TITLE,
+  SET_URL
 } from "./types";
 
 export const addPlaylist = () => ({
@@ -26,4 +29,19 @@ export const selectVideo = videoId => ({
 export const selectPlaylist = playlistId => ({
   type: SELECT_PLAYLIST,
   payload: playlistId
+});
+
+export const setArtist = artist => ({
+  type: SET_ARTIST,
+  payload: artist
+});
+
+export const setTitle = title => ({
+  type: SET_TITLE,
+  payload: title
+});
+
+export const setUrl = url => ({
+  type: SET_URL,
+  payload: url
 });

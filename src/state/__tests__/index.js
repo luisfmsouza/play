@@ -208,4 +208,74 @@ describe("state", () => {
       });
     });
   });
+
+  describe("SET_ARTIST action", () => {
+    it("edits the artist form value", () => {
+      const actualState = {
+        playlists: [[video, video, video]],
+        currentPlaylist: 0,
+        currentVideo: 0,
+        form: { artist: "", title: "", url: "" }
+      };
+      const actual = reducer(actualState, act.setArtist("Lady Gaga"));
+
+      const expected = {
+        playlists: [[video, video, video]],
+        currentPlaylist: 0,
+        currentVideo: 0,
+        form: { artist: "Lady Gaga", title: "", url: "" }
+      };
+
+      expect(actual).toEqual(expected);
+    });
+  });
+
+  describe("SET_TITLE action", () => {
+    it("edits the title form value", () => {
+      const actualState = {
+        playlists: [[video, video, video]],
+        currentPlaylist: 0,
+        currentVideo: 0,
+        form: { artist: "", title: "", url: "" }
+      };
+      const actual = reducer(actualState, act.setTitle("Shallow"));
+
+      const expected = {
+        playlists: [[video, video, video]],
+        currentPlaylist: 0,
+        currentVideo: 0,
+        form: { artist: "", title: "Shallow", url: "" }
+      };
+
+      expect(actual).toEqual(expected);
+    });
+  });
+
+  describe("SET_URL action", () => {
+    it("edits the url form value", () => {
+      const actualState = {
+        playlists: [[video, video, video]],
+        currentPlaylist: 0,
+        currentVideo: 0,
+        form: { artist: "", title: "", url: "" }
+      };
+      const actual = reducer(
+        actualState,
+        act.setUrl("https://www.youtube.com/watch?v=JPJjwHAIny4")
+      );
+
+      const expected = {
+        playlists: [[video, video, video]],
+        currentPlaylist: 0,
+        currentVideo: 0,
+        form: {
+          artist: "",
+          title: "",
+          url: "https://www.youtube.com/watch?v=JPJjwHAIny4"
+        }
+      };
+
+      expect(actual).toEqual(expected);
+    });
+  });
 });
