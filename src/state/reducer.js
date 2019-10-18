@@ -14,8 +14,9 @@ export default (state = initialState, { type, payload }) => {
   switch (type) {
     case ADD_PLAYLIST: {
       const playlists = state.playlists ? [...state.playlists, []] : [[]];
+      const currentPlaylist = playlists.length - 1;
 
-      return { ...state, playlists };
+      return { ...state, playlists, currentPlaylist };
     }
 
     case ADD_VIDEO: {
@@ -27,10 +28,13 @@ export default (state = initialState, { type, payload }) => {
 
       const form = { artist: "", title: "", url: "" };
 
+      const currentVideo = playlists[state.currentPlaylist].length - 1;
+
       return {
         ...state,
         playlists,
-        form
+        form,
+        currentVideo
       };
     }
 

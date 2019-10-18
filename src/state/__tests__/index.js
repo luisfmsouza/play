@@ -10,8 +10,8 @@ describe("state", () => {
 
     const expected = {
       playlists: null,
-      currentPlaylist: 0,
-      currentVideo: 0,
+      currentPlaylist: null,
+      currentVideo: null,
       form: { artist: "", title: "", url: "" }
     };
 
@@ -26,7 +26,7 @@ describe("state", () => {
         const expected = {
           playlists: [[]],
           currentPlaylist: 0,
-          currentVideo: 0,
+          currentVideo: null,
           form: { artist: "", title: "", url: "" }
         };
 
@@ -35,7 +35,7 @@ describe("state", () => {
     });
 
     describe("when there is already a playlist", () => {
-      it("creates a new playlist in the end of playlists array", () => {
+      it("creates a new playlist and sets it as current", () => {
         const actualState = {
           ...initialState,
           playlists: [[video, video], [video]]
@@ -44,8 +44,8 @@ describe("state", () => {
 
         const expected = {
           playlists: [[video, video], [video], []],
-          currentPlaylist: 0,
-          currentVideo: 0,
+          currentPlaylist: 2,
+          currentVideo: null,
           form: { artist: "", title: "", url: "" }
         };
 
@@ -59,7 +59,7 @@ describe("state", () => {
       const actualState = {
         playlists: [[]],
         currentPlaylist: 0,
-        currentVideo: 0,
+        currentVideo: null,
         form: video
       };
       const actual = reducer(actualState, act.addVideo());
@@ -79,7 +79,7 @@ describe("state", () => {
         const actualState = {
           playlists: [[video, video], [video, video], [video, video]],
           currentPlaylist: 1,
-          currentVideo: 0,
+          currentVideo: 1,
           form: { artist: "new artist", title: "new title", url: "new url" }
         };
         const actual = reducer(actualState, act.addVideo());
@@ -95,7 +95,7 @@ describe("state", () => {
             [video, video]
           ],
           currentPlaylist: 1,
-          currentVideo: 0,
+          currentVideo: 2,
           form: { artist: "", title: "", url: "" }
         };
 

@@ -1,6 +1,6 @@
 export default {
   playlists: null,
-  currentPlaylist: 0,
-  currentVideo: 0,
+  currentPlaylist: null,
+  currentVideo: null,
   form: { artist: "", title: "", url: "" }
 };
