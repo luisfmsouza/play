@@ -1,4 +1,8 @@
 import React from "react";
-import Form from "./form";
+import { Provider } from "react-redux";
 
-export default () => <Form />;
+import store from "./state";
+
+const App = () => <Provider store={store}></Provider>;
+
+export default App;
