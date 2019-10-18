@@ -1,0 +1,168 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Player component when does not have playlists nor videos renders add playlist button component 1`] = `
+<button
+  className="sc-kAzzGY lmUEGD"
+  onClick={[Function]}
+>
+  + Add your first playlist
+</button>
+`;
+
+exports[`Player component when does not have video on selected playlist renders add video form component 1`] = `
+<div
+  className="sc-bdVaJa hxIwds"
+>
+  <form
+    onSubmit={[Function]}
+  >
+    <label
+      className="sc-bwzfXH dnbGwd"
+      htmlFor="artist"
+    >
+      Artist:
+    </label>
+    <input
+      className="sc-htpNat gBBCDj"
+      id="artist"
+      onChange={[Function]}
+      required={true}
+      type="text"
+      value=""
+    />
+    <label
+      className="sc-bwzfXH dnbGwd"
+      htmlFor="title"
+    >
+      Title:
+    </label>
+    <input
+      className="sc-htpNat gBBCDj"
+      id="title"
+      onChange={[Function]}
+      required={true}
+      type="text"
+      value=""
+    />
+    <label
+      className="sc-bwzfXH dnbGwd"
+      htmlFor="url"
+    >
+      URL:
+    </label>
+    <input
+      className="sc-htpNat gBBCDj"
+      id="url"
+      onChange={[Function]}
+      required={true}
+      type="text"
+      value=""
+    />
+    <button
+      className="sc-bxivhb dJVtKI"
+      type="submit"
+    >
+      Add video
+    </button>
+  </form>
+</div>
+`;
+
+exports[`Player component when there is playlists and videos renders default component 1`] = `
+<div
+  className="sc-ifAKCX fKCMBT"
+>
+  <div
+    className="sc-EHOje bUWMzt"
+  >
+    <iframe
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen={true}
+      frameBorder="0"
+      height="315"
+      src="https://www.youtube.com/embed/249i5jNRClU"
+      title="Title 2"
+      width="560"
+    />
+  </div>
+  <div
+    className="sc-jzJRlG gCenpR"
+  >
+    <h1
+      className="sc-gZMcBi eFUkCr"
+    >
+      Title 2
+    </h1>
+    <h2
+      className="sc-gqjmRU dniKdl"
+    >
+      Artist 2
+    </h2>
+  </div>
+  <div
+    className="sc-bZQynM fLiCiD"
+  >
+    <h3
+      className="sc-gzVnrw gwisOI"
+    >
+      Videos
+    </h3>
+    <button
+      className="sc-htoDjs bFFuJY"
+      onClick={[Function]}
+    >
+      <div
+        className="sc-dnqmqq hOKQLU"
+      >
+        <img
+          className="sc-iwsKbI hsExMc"
+          src="https://placekitten.com/100/56"
+        />
+        <p
+          className="sc-VigVT dMUWxt"
+        >
+          Title 1
+        </p>
+        <p
+          className="sc-jTzLTM ijUaSo"
+        >
+          Artist 1
+        </p>
+      </div>
+    </button>
+    <button
+      className="sc-htoDjs bFFuJY"
+      onClick={[Function]}
+    >
+      <div
+        className="sc-dnqmqq gDPkJq"
+      >
+        <img
+          className="sc-iwsKbI hsExMc"
+          src="https://placekitten.com/100/56"
+        />
+        <p
+          className="sc-VigVT dMUWxt"
+        >
+          Title 2
+        </p>
+        <p
+          className="sc-jTzLTM ijUaSo"
+        >
+          Artist 2
+        </p>
+      </div>
+    </button>
+  </div>
+  <div
+    className="sc-cSHVUG fwLHbJ"
+  >
+    <button
+      className="sc-fjdhpX jptjDL"
+      onClick={[Function]}
+    >
+      + add new video
+    </button>
+  </div>
+</div>
+`;

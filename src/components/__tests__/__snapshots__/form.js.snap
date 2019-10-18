@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form component when does not have playlists does not render the Form 1`] = `null`;
+
+exports[`Form component when there is playlists renders default component 1`] = `
+<div
+  className="sc-bdVaJa hxIwds"
+>
+  <form
+    onSubmit={[Function]}
+  >
+    <label
+      className="sc-bwzfXH dnbGwd"
+      htmlFor="artist"
+    >
+      Artist:
+    </label>
+    <input
+      className="sc-htpNat gBBCDj"
+      id="artist"
+      onChange={[Function]}
+      required={true}
+      type="text"
+      value="artist"
+    />
+    <label
+      className="sc-bwzfXH dnbGwd"
+      htmlFor="title"
+    >
+      Title:
+    </label>
+    <input
+      className="sc-htpNat gBBCDj"
+      id="title"
+      onChange={[Function]}
+      required={true}
+      type="text"
+      value="title"
+    />
+    <label
+      className="sc-bwzfXH dnbGwd"
+      htmlFor="url"
+    >
+      URL:
+    </label>
+    <input
+      className="sc-htpNat gBBCDj"
+      id="url"
+      onChange={[Function]}
+      required={true}
+      type="text"
+      value="https://url.com"
+    />
+    <button
+      className="sc-bxivhb dJVtKI"
+      type="submit"
+    >
+      Add video
+    </button>
+  </form>
+</div>
+`;

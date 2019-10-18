@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Playlist component when does not have playlists renders nothing 1`] = `null`;
+
+exports[`Playlist component when there is playlists renders default component 1`] = `
+Array [
+  <h3
+    className="sc-htpNat bpiAFK"
+  >
+    Playlists
+  </h3>,
+  <div
+    className="sc-bdVaJa gexCij"
+  >
+    <button
+      className="sc-gzVnrw hwdwgU"
+      onClick={[Function]}
+    >
+      + add playlist
+    </button>
+    <div
+      className="sc-bwzfXH iwEgFM"
+    >
+      <button
+        className="sc-bxivhb jELbNG"
+        onClick={[Function]}
+      >
+        <img
+          className="sc-ifAKCX fPFXNf"
+          src="https://placekitten.com/210/118"
+        />
+      </button>
+      <button
+        className="sc-bxivhb jELbNG"
+        onClick={[Function]}
+      >
+        <img
+          className="sc-ifAKCX fPFXNf"
+          src="https://placekitten.com/210/118"
+        />
+        <div
+          className="sc-EHOje tIvPg"
+        >
+          <span
+            className="sc-bZQynM glHohg"
+          >
+            Play 
+            0
+             videos
+          </span>
+        </div>
+      </button>
+      <button
+        className="sc-bxivhb jELbNG"
+        onClick={[Function]}
+      >
+        <img
+          className="sc-ifAKCX fPFXNf"
+          src="https://placekitten.com/210/118"
+        />
+        <div
+          className="sc-EHOje tIvPg"
+        >
+          <span
+            className="sc-bZQynM glHohg"
+          >
+            Play 
+            3
+             videos
+          </span>
+        </div>
+      </button>
+      <button
+        className="sc-bxivhb jELbNG"
+        onClick={[Function]}
+      >
+        <img
+          className="sc-ifAKCX fPFXNf"
+          src="https://placekitten.com/210/118"
+        />
+        <div
+          className="sc-EHOje tIvPg"
+        >
+          <span
+            className="sc-bZQynM glHohg"
+          >
+            Play 
+            1
+             videos
+          </span>
+        </div>
+      </button>
+    </div>
+  </div>,
+]
+`;
