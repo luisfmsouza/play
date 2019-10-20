@@ -6,7 +6,8 @@ import {
   SELECT_VIDEO,
   SET_ARTIST,
   SET_TITLE,
-  SET_URL
+  SET_URL,
+  TOGGLE_SHOW_FORM
 } from "./types";
 
 export const addPlaylist = () => ({
@@ -45,3 +46,5 @@ export const setUrl = url => ({
   type: SET_URL,
   payload: url
 });
+
+export const toggleShowForm = () => ({ type: TOGGLE_SHOW_FORM });

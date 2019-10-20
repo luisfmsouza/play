@@ -12,7 +12,8 @@ describe("state", () => {
       playlists: null,
       currentPlaylist: null,
       currentVideo: null,
-      form: { artist: "", title: "", url: "" }
+      form: { artist: "", title: "", url: "" },
+      showForm: false
     };
 
     expect(actual).toEqual(expected);
@@ -27,7 +28,8 @@ describe("state", () => {
           playlists: [[]],
           currentPlaylist: 0,
           currentVideo: null,
-          form: { artist: "", title: "", url: "" }
+          form: { artist: "", title: "", url: "" },
+          showForm: true
         };
 
         expect(actual).toEqual(expected);
@@ -46,7 +48,8 @@ describe("state", () => {
           playlists: [[video, video], [video], []],
           currentPlaylist: 2,
           currentVideo: null,
-          form: { artist: "", title: "", url: "" }
+          form: { artist: "", title: "", url: "" },
+          showForm: true
         };
 
         expect(actual).toEqual(expected);
@@ -60,7 +63,8 @@ describe("state", () => {
         playlists: [[]],
         currentPlaylist: 0,
         currentVideo: null,
-        form: video
+        form: video,
+        showForm: true
       };
       const actual = reducer(actualState, act.addVideo());
 
@@ -68,7 +72,8 @@ describe("state", () => {
         playlists: [[{ artist: "artist", title: "title", url: "url" }]],
         currentPlaylist: 0,
         currentVideo: 0,
-        form: { artist: "", title: "", url: "" }
+        form: { artist: "", title: "", url: "" },
+        showForm: false
       };
 
       expect(actual).toEqual(expected);
@@ -80,7 +85,8 @@ describe("state", () => {
           playlists: [[video, video], [video, video], [video, video]],
           currentPlaylist: 1,
           currentVideo: 1,
-          form: { artist: "new artist", title: "new title", url: "new url" }
+          form: { artist: "new artist", title: "new title", url: "new url" },
+          showForm: true
         };
         const actual = reducer(actualState, act.addVideo());
 
@@ -96,7 +102,8 @@ describe("state", () => {
           ],
           currentPlaylist: 1,
           currentVideo: 2,
-          form: { artist: "", title: "", url: "" }
+          form: { artist: "", title: "", url: "" },
+          showForm: false
         };
 
         expect(actual).toEqual(expected);
@@ -273,6 +280,58 @@ describe("state", () => {
           title: "",
           url: "https://www.youtube.com/watch?v=JPJjwHAIny4"
         }
+      };
+
+      expect(actual).toEqual(expected);
+    });
+  });
+
+  describe("TOGGLE_SHOW_FORM action", () => {
+    it("shows form to add videos", () => {
+      const actualState = {
+        playlists: [[video, video, video]],
+        currentPlaylist: 0,
+        currentVideo: 0,
+        form: { artist: "", title: "", url: "" },
+        showForm: false
+      };
+      const actual = reducer(actualState, act.toggleShowForm());
+
+      const expected = {
+        playlists: [[video, video, video]],
+        currentPlaylist: 0,
+        currentVideo: 0,
+        form: {
+          artist: "",
+          title: "",
+          url: ""
+        },
+        showForm: true
+      };
+
+      expect(actual).toEqual(expected);
+    });
+
+    it("hides form to add videos", () => {
+      const actualState = {
+        playlists: [[video, video, video]],
+        currentPlaylist: 0,
+        currentVideo: 0,
+        form: { artist: "", title: "", url: "" },
+        showForm: true
+      };
+      const actual = reducer(actualState, act.toggleShowForm());
+
+      const expected = {
+        playlists: [[video, video, video]],
+        currentPlaylist: 0,
+        currentVideo: 0,
+        form: {
+          artist: "",
+          title: "",
+          url: ""
+        },
+        showForm: false
       };
 
       expect(actual).toEqual(expected);

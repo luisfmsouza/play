@@ -6,3 +6,4 @@ export const SELECT_PLAYLIST = "SELECT_PLAYLIST";
 export const SET_ARTIST = "SET_ARTIST";
 export const SET_TITLE = "SET_TITLE";
 export const SET_URL = "SET_URL";
+export const TOGGLE_SHOW_FORM = "TOGGLE_SHOW_FORM";
