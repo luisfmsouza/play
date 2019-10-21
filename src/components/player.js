@@ -9,13 +9,23 @@ import VideoQueue from "./queue";
 const Container = styled.div`
   border-bottom: 1px solid ${({ theme }) => theme.colors.sky};
   display: grid;
-  grid-template-columns: auto 300px;
+  grid-template-columns: auto;
   grid-gap: 0 10px;
-  grid-template-rows: auto 60px;
+  grid-template-rows: auto;
   grid-template-areas:
-    "player list"
-    "info form";
+    "player"
+    "info"
+    "list"
+    "form";
   margin-bottom: 10px;
+
+  @media (min-width: 768px) {
+    grid-template-columns: auto 300px;
+    grid-template-rows: auto 60px;
+    grid-template-areas:
+      "player list"
+      "info form";
+  }
 `;
 
 const Video = styled.div`

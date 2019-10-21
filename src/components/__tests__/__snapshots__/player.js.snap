@@ -70,7 +70,7 @@ exports[`Player component when does not have video on selected playlist renders 
 
 exports[`Player component when there is playlists and videos renders default component 1`] = `
 <div
-  className="sc-gZMcBi fZVuvt"
+  className="sc-gZMcBi cvRHTM"
 >
   <div
     className="sc-gqjmRU kbqIjb"
