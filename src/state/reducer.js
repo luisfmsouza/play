@@ -29,7 +29,7 @@ export default (state = initialState, { type, payload }) => {
 
       const form = { artist: "", title: "", videoId: "" };
 
-      const currentVideo = playlists[state.currentPlaylist].length - 1;
+      const currentVideo = state.currentVideo === null ? 0 : state.currentVideo;
 
       return {
         ...state,

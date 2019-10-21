@@ -109,7 +109,7 @@ describe("state", () => {
             [video, video]
           ],
           currentPlaylist: 1,
-          currentVideo: 2,
+          currentVideo: 1,
           form: { artist: "", title: "", videoId: "" },
           showForm: false
         };
