@@ -7,7 +7,8 @@ import {
   addVideo,
   addPlaylist,
   selectPlaylist,
-  toggleShowForm
+  toggleShowForm,
+  nextVideo
 } from "../state/actions";
 
 export const formContainer = connect(
@@ -34,7 +35,8 @@ export const playerContainer = connect(
   {
     selectVideo,
     toggleShowForm,
-    addPlaylist
+    addPlaylist,
+    nextVideo
   }
 );
 

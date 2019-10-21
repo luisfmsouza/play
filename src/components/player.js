@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import YouTube from "@u-wave/react-youtube";
 
 import { playerContainer } from "./container";
 import VideoForm from "./form";
@@ -8,6 +9,7 @@ const Container = styled.div`
   border-bottom: 1px solid ${({ theme }) => theme.colors.sky};
   display: grid;
   grid-template-columns: auto 300px;
+  grid-gap: 0 10px;
   grid-template-rows: auto 60px;
   grid-template-areas:
     "player list"
@@ -16,7 +18,10 @@ const Container = styled.div`
 `;
 
 const PlayerContent = styled.div`
+  height: 0;
   grid-area: player;
+  padding-bottom: 56.25%;
+  position: relative;
 `;
 
 const List = styled.div`
@@ -162,13 +167,18 @@ const Close = styled.button`
   }
 `;
 
+const StyledYouTube = styled(YouTube)`
+  position: absolute;
+`;
+
 const Player = ({
   playlist,
   currentVideo,
   showForm,
   selectVideo,
   toggleShowForm,
-  addPlaylist
+  addPlaylist,
+  nextVideo
 }) => {
   const hasPlaylist = Boolean(playlist);
   const hasVideo = hasPlaylist && Boolean(playlist.length);
@@ -177,15 +187,19 @@ const Player = ({
     return (
       <Container>
         <PlayerContent>
-          <iframe
-            width="560"
-            height="315"
-            src={playlist[currentVideo].url}
-            frameBorder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            title={playlist[currentVideo].title}
-          ></iframe>
+          <StyledYouTube
+            video={playlist[currentVideo].url}
+            autoplay
+            showRelatedVideos={false}
+            showInfo={false}
+            height="100%"
+            width="100%"
+            onStateChange={event => {
+              if (event.data === window.YT.PlayerState.ENDED) {
+                nextVideo();
+              }
+            }}
+          />
         </PlayerContent>
 
         <TitleContainer>
