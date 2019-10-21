@@ -212,7 +212,11 @@ const Player = ({
           {playlist.map(({ artist, title, url }, index) => (
             <VideoButton key={index} onClick={() => selectVideo(index)}>
               <Item active={index === currentVideo}>
-                <Thumbnail src="https://placekitten.com/100/56" />
+                <Thumbnail
+                  src={`https://img.youtube.com/vi/${url}/default.jpg`}
+                  width="100"
+                />
+
                 <ListTitle>{title}</ListTitle>
                 <ListArtist>{artist}</ListArtist>
               </Item>

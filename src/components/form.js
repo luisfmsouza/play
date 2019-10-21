@@ -5,9 +5,11 @@ import { formContainer } from "./container";
 
 const Container = styled.div`
   background-color: white;
+  box-sizing: border-box;
   max-width: 300px;
-  padding: 10px 0;
+  padding: 10px;
   width: 100%;
+  z-index: 1;
 `;
 
 const Label = styled.label`

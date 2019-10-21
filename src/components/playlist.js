@@ -5,7 +5,7 @@ import { playlistContainer } from "./container";
 
 const Container = styled.div`
   display: grid;
-  grid-template-columns: 220px auto;
+  grid-template-columns: 167px auto;
 `;
 
 const List = styled.div`
@@ -22,16 +22,19 @@ const Title = styled.h3`
 
 const Button = styled.button`
   border: none;
+  background-color: ${({ theme }) => theme.colors.skyLight};
+  color: ${({ theme }) => theme.colors.inkLighter};
   cursor: pointer;
+  font-size: 16px;
   margin: 5px;
+  min-height: 118px;
   padding: 0;
   position: relative;
+  vertical-align: bottom;
 `;
 
 const Thumbnail = styled.img`
   display: block;
-  height: 118px;
-  width: 210px;
 `;
 
 const Overlay = styled.div`
@@ -70,7 +73,7 @@ const AddVideoPlaylist = styled.button`
   text-transform: uppercase;
   transition: all 0.3s;
   vertical-align: bottom;
-  width: 210px;
+  width: 157px;
 
   &:hover {
     background-color: ${({ theme }) => theme.colors.inkLighter};
@@ -93,7 +96,14 @@ const Playlist = ({
         <List>
           {playlists.map((playlist, index) => (
             <Button key={index} onClick={() => selectPlaylist(index)}>
-              <Thumbnail src="https://placekitten.com/210/118" />
+              {playlist[0] ? (
+                <Thumbnail
+                  src={`https://img.youtube.com/vi/${playlist[0].url}/default.jpg`}
+                  height="118"
+                />
+              ) : (
+                `Add new videos!`
+              )}
               {index !== currentPlaylist && (
                 <Overlay>
                   <Video>Play {playlist.length} videos</Video>

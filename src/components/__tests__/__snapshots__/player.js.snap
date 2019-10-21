@@ -11,7 +11,7 @@ exports[`Player component when does not have playlists nor videos renders add pl
 
 exports[`Player component when does not have video on selected playlist renders add video form component 1`] = `
 <div
-  className="sc-bdVaJa hxIwds"
+  className="sc-bdVaJa fKgYJA"
 >
   <form
     onSubmit={[Function]}
@@ -110,7 +110,8 @@ exports[`Player component when there is playlists and videos renders default com
       >
         <img
           className="sc-iwsKbI hsExMc"
-          src="https://placekitten.com/100/56"
+          src="https://img.youtube.com/vi/https://www.youtube.com/embed/MeSu5_Do8P8/default.jpg"
+          width="100"
         />
         <p
           className="sc-VigVT dMUWxt"
@@ -133,7 +134,8 @@ exports[`Player component when there is playlists and videos renders default com
       >
         <img
           className="sc-iwsKbI hsExMc"
-          src="https://placekitten.com/100/56"
+          src="https://img.youtube.com/vi/https://www.youtube.com/embed/249i5jNRClU/default.jpg"
+          width="100"
         />
         <p
           className="sc-VigVT dMUWxt"

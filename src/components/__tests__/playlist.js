@@ -77,6 +77,21 @@ describe("Playlist component", () => {
 
       expect(expected).toMatchSnapshot();
     });
+
+    describe("when does not have videos on playlist", () => {
+      it("renders a placeholder message", () => {
+        const state = {
+          playlists: [[]],
+          currentPlaylist: 0,
+          currentVideo: 1,
+          form: { artist: "", title: "", url: "" }
+        };
+
+        const expected = build(state);
+
+        expect(expected).toMatchSnapshot();
+      });
+    });
   });
 
   describe("when does not have playlists", () => {

@@ -10,10 +10,10 @@ Array [
     Playlists
   </h3>,
   <div
-    className="sc-bdVaJa gexCij"
+    className="sc-bdVaJa juKbqn"
   >
     <button
-      className="sc-gzVnrw hwdwgU"
+      className="sc-gzVnrw bVZrSh"
       onClick={[Function]}
     >
       + add playlist
@@ -22,22 +22,20 @@ Array [
       className="sc-bwzfXH iwEgFM"
     >
       <button
-        className="sc-bxivhb jELbNG"
+        className="sc-bxivhb dtoCMN"
         onClick={[Function]}
       >
         <img
-          className="sc-ifAKCX fPFXNf"
-          src="https://placekitten.com/210/118"
+          className="sc-ifAKCX kXFzZl"
+          height="118"
+          src="https://img.youtube.com/vi/https://www.youtube.com/embed/MeSu5_Do8P8/default.jpg"
         />
       </button>
       <button
-        className="sc-bxivhb jELbNG"
+        className="sc-bxivhb dtoCMN"
         onClick={[Function]}
       >
-        <img
-          className="sc-ifAKCX fPFXNf"
-          src="https://placekitten.com/210/118"
-        />
+        Add new videos!
         <div
           className="sc-EHOje tIvPg"
         >
@@ -51,12 +49,13 @@ Array [
         </div>
       </button>
       <button
-        className="sc-bxivhb jELbNG"
+        className="sc-bxivhb dtoCMN"
         onClick={[Function]}
       >
         <img
-          className="sc-ifAKCX fPFXNf"
-          src="https://placekitten.com/210/118"
+          className="sc-ifAKCX kXFzZl"
+          height="118"
+          src="https://img.youtube.com/vi/https://www.youtube.com/embed/qSeaR7Dqvdc/default.jpg"
         />
         <div
           className="sc-EHOje tIvPg"
@@ -71,12 +70,13 @@ Array [
         </div>
       </button>
       <button
-        className="sc-bxivhb jELbNG"
+        className="sc-bxivhb dtoCMN"
         onClick={[Function]}
       >
         <img
-          className="sc-ifAKCX fPFXNf"
-          src="https://placekitten.com/210/118"
+          className="sc-ifAKCX kXFzZl"
+          height="118"
+          src="https://img.youtube.com/vi/https://www.youtube.com/embed/ykHiSn1K1E/default.jpg"
         />
         <div
           className="sc-EHOje tIvPg"
@@ -89,6 +89,36 @@ Array [
              videos
           </span>
         </div>
+      </button>
+    </div>
+  </div>,
+]
+`;
+
+exports[`Playlist component when there is playlists when does not have videos on playlist renders a placeholder message 1`] = `
+Array [
+  <h3
+    className="sc-htpNat bpiAFK"
+  >
+    Playlists
+  </h3>,
+  <div
+    className="sc-bdVaJa juKbqn"
+  >
+    <button
+      className="sc-gzVnrw bVZrSh"
+      onClick={[Function]}
+    >
+      + add playlist
+    </button>
+    <div
+      className="sc-bwzfXH iwEgFM"
+    >
+      <button
+        className="sc-bxivhb dtoCMN"
+        onClick={[Function]}
+      >
+        Add new videos!
       </button>
     </div>
   </div>,
