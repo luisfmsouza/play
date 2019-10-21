@@ -6,7 +6,7 @@ import {
   SELECT_VIDEO,
   SET_ARTIST,
   SET_TITLE,
-  SET_URL,
+  SET_VIDEO_ID,
   TOGGLE_SHOW_FORM
 } from "./types";
 
@@ -42,9 +42,9 @@ export const setTitle = title => ({
   payload: title
 });
 
-export const setUrl = url => ({
-  type: SET_URL,
-  payload: url
+export const setVideoId = videoId => ({
+  type: SET_VIDEO_ID,
+  payload: videoId
 });
 
 export const toggleShowForm = () => ({ type: TOGGLE_SHOW_FORM });

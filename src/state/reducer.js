@@ -7,7 +7,7 @@ import {
   SELECT_VIDEO,
   SET_ARTIST,
   SET_TITLE,
-  SET_URL,
+  SET_VIDEO_ID,
   TOGGLE_SHOW_FORM
 } from "./types";
 
@@ -27,7 +27,7 @@ export default (state = initialState, { type, payload }) => {
         return isCurrentPlaylist ? [...playlist, state.form] : playlist;
       });
 
-      const form = { artist: "", title: "", url: "" };
+      const form = { artist: "", title: "", videoId: "" };
 
       const currentVideo = playlists[state.currentPlaylist].length - 1;
 
@@ -64,8 +64,8 @@ export default (state = initialState, { type, payload }) => {
       return { ...state, form: { ...state.form, title: payload } };
     }
 
-    case SET_URL: {
-      return { ...state, form: { ...state.form, url: payload } };
+    case SET_VIDEO_ID: {
+      return { ...state, form: { ...state.form, videoId: payload } };
     }
 
     case TOGGLE_SHOW_FORM: {

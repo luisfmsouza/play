@@ -2,7 +2,7 @@ import * as act from "../actions";
 import reducer from "../reducer";
 import initialState from "../state";
 
-const video = { artist: "artist", title: "title", url: "url" };
+const video = { artist: "artist", title: "title", videoId: "videoId" };
 
 describe("state", () => {
   it("returns the initial state", () => {
@@ -12,7 +12,7 @@ describe("state", () => {
       playlists: null,
       currentPlaylist: null,
       currentVideo: null,
-      form: { artist: "", title: "", url: "" },
+      form: { artist: "", title: "", videoId: "" },
       showForm: false
     };
 
@@ -28,7 +28,7 @@ describe("state", () => {
           playlists: [[]],
           currentPlaylist: 0,
           currentVideo: null,
-          form: { artist: "", title: "", url: "" },
+          form: { artist: "", title: "", videoId: "" },
           showForm: true
         };
 
@@ -48,7 +48,7 @@ describe("state", () => {
           playlists: [[video, video], [video], []],
           currentPlaylist: 2,
           currentVideo: null,
-          form: { artist: "", title: "", url: "" },
+          form: { artist: "", title: "", videoId: "" },
           showForm: true
         };
 
@@ -69,10 +69,10 @@ describe("state", () => {
       const actual = reducer(actualState, act.addVideo());
 
       const expected = {
-        playlists: [[{ artist: "artist", title: "title", url: "url" }]],
+        playlists: [[{ artist: "artist", title: "title", videoId: "videoId" }]],
         currentPlaylist: 0,
         currentVideo: 0,
-        form: { artist: "", title: "", url: "" },
+        form: { artist: "", title: "", videoId: "" },
         showForm: false
       };
 
@@ -85,7 +85,11 @@ describe("state", () => {
           playlists: [[video, video], [video, video], [video, video]],
           currentPlaylist: 1,
           currentVideo: 1,
-          form: { artist: "new artist", title: "new title", url: "new url" },
+          form: {
+            artist: "new artist",
+            title: "new title",
+            videoId: "new videoId"
+          },
           showForm: true
         };
         const actual = reducer(actualState, act.addVideo());
@@ -96,13 +100,17 @@ describe("state", () => {
             [
               video,
               video,
-              { artist: "new artist", title: "new title", url: "new url" }
+              {
+                artist: "new artist",
+                title: "new title",
+                videoId: "new videoId"
+              }
             ],
             [video, video]
           ],
           currentPlaylist: 1,
           currentVideo: 2,
-          form: { artist: "", title: "", url: "" },
+          form: { artist: "", title: "", videoId: "" },
           showForm: false
         };
 
@@ -117,7 +125,7 @@ describe("state", () => {
         playlists: [[video, video]],
         currentPlaylist: 0,
         currentVideo: 0,
-        form: { artist: "", title: "", url: "" }
+        form: { artist: "", title: "", videoId: "" }
       };
       const actual = reducer(actualState, act.nextVideo());
 
@@ -125,7 +133,7 @@ describe("state", () => {
         playlists: [[video, video]],
         currentPlaylist: 0,
         currentVideo: 1,
-        form: { artist: "", title: "", url: "" }
+        form: { artist: "", title: "", videoId: "" }
       };
 
       expect(actual).toEqual(expected);
@@ -137,7 +145,7 @@ describe("state", () => {
           playlists: [[video, video]],
           currentPlaylist: 0,
           currentVideo: 1,
-          form: { artist: "", title: "", url: "" }
+          form: { artist: "", title: "", videoId: "" }
         };
         const actual = reducer(actualState, act.nextVideo());
 
@@ -145,7 +153,7 @@ describe("state", () => {
           playlists: [[video, video]],
           currentPlaylist: 0,
           currentVideo: 0,
-          form: { artist: "", title: "", url: "" }
+          form: { artist: "", title: "", videoId: "" }
         };
 
         expect(actual).toEqual(expected);
@@ -159,7 +167,7 @@ describe("state", () => {
         playlists: [[video, video, video]],
         currentPlaylist: 0,
         currentVideo: 0,
-        form: { artist: "", title: "", url: "" }
+        form: { artist: "", title: "", videoId: "" }
       };
       const actual = reducer(actualState, act.selectVideo(2));
 
@@ -167,7 +175,7 @@ describe("state", () => {
         playlists: [[video, video, video]],
         currentPlaylist: 0,
         currentVideo: 2,
-        form: { artist: "", title: "", url: "" }
+        form: { artist: "", title: "", videoId: "" }
       };
 
       expect(actual).toEqual(expected);
@@ -180,7 +188,7 @@ describe("state", () => {
         playlists: [[video, video], [video, video]],
         currentPlaylist: 0,
         currentVideo: 0,
-        form: { artist: "", title: "", url: "" }
+        form: { artist: "", title: "", videoId: "" }
       };
       const actual = reducer(actualState, act.selectPlaylist(1));
 
@@ -188,7 +196,7 @@ describe("state", () => {
         playlists: [[video, video], [video, video]],
         currentPlaylist: 1,
         currentVideo: 0,
-        form: { artist: "", title: "", url: "" }
+        form: { artist: "", title: "", videoId: "" }
       };
 
       expect(actual).toEqual(expected);
@@ -200,7 +208,7 @@ describe("state", () => {
           playlists: [[video, video, video], [video, video, video]],
           currentPlaylist: 1,
           currentVideo: 2,
-          form: { artist: "", title: "", url: "" }
+          form: { artist: "", title: "", videoId: "" }
         };
         const actual = reducer(actualState, act.selectPlaylist(0));
 
@@ -208,7 +216,7 @@ describe("state", () => {
           playlists: [[video, video, video], [video, video, video]],
           currentPlaylist: 0,
           currentVideo: 0,
-          form: { artist: "", title: "", url: "" }
+          form: { artist: "", title: "", videoId: "" }
         };
 
         expect(actual).toEqual(expected);
@@ -222,7 +230,7 @@ describe("state", () => {
         playlists: [[video, video, video]],
         currentPlaylist: 0,
         currentVideo: 0,
-        form: { artist: "", title: "", url: "" }
+        form: { artist: "", title: "", videoId: "" }
       };
       const actual = reducer(actualState, act.setArtist("Lady Gaga"));
 
@@ -230,7 +238,7 @@ describe("state", () => {
         playlists: [[video, video, video]],
         currentPlaylist: 0,
         currentVideo: 0,
-        form: { artist: "Lady Gaga", title: "", url: "" }
+        form: { artist: "Lady Gaga", title: "", videoId: "" }
       };
 
       expect(actual).toEqual(expected);
@@ -243,7 +251,7 @@ describe("state", () => {
         playlists: [[video, video, video]],
         currentPlaylist: 0,
         currentVideo: 0,
-        form: { artist: "", title: "", url: "" }
+        form: { artist: "", title: "", videoId: "" }
       };
       const actual = reducer(actualState, act.setTitle("Shallow"));
 
@@ -251,24 +259,24 @@ describe("state", () => {
         playlists: [[video, video, video]],
         currentPlaylist: 0,
         currentVideo: 0,
-        form: { artist: "", title: "Shallow", url: "" }
+        form: { artist: "", title: "Shallow", videoId: "" }
       };
 
       expect(actual).toEqual(expected);
     });
   });
 
-  describe("SET_URL action", () => {
-    it("edits the url form value", () => {
+  describe("SET_VIDEO_ID action", () => {
+    it("edits the videoId form value", () => {
       const actualState = {
         playlists: [[video, video, video]],
         currentPlaylist: 0,
         currentVideo: 0,
-        form: { artist: "", title: "", url: "" }
+        form: { artist: "", title: "", videoId: "" }
       };
       const actual = reducer(
         actualState,
-        act.setUrl("https://www.youtube.com/watch?v=JPJjwHAIny4")
+        act.setVideoId("https://www.youtube.com/watch?v=JPJjwHAIny4")
       );
 
       const expected = {
@@ -278,7 +286,7 @@ describe("state", () => {
         form: {
           artist: "",
           title: "",
-          url: "https://www.youtube.com/watch?v=JPJjwHAIny4"
+          videoId: "https://www.youtube.com/watch?v=JPJjwHAIny4"
         }
       };
 
@@ -292,7 +300,7 @@ describe("state", () => {
         playlists: [[video, video, video]],
         currentPlaylist: 0,
         currentVideo: 0,
-        form: { artist: "", title: "", url: "" },
+        form: { artist: "", title: "", videoId: "" },
         showForm: false
       };
       const actual = reducer(actualState, act.toggleShowForm());
@@ -304,7 +312,7 @@ describe("state", () => {
         form: {
           artist: "",
           title: "",
-          url: ""
+          videoId: ""
         },
         showForm: true
       };
@@ -317,7 +325,7 @@ describe("state", () => {
         playlists: [[video, video, video]],
         currentPlaylist: 0,
         currentVideo: 0,
-        form: { artist: "", title: "", url: "" },
+        form: { artist: "", title: "", videoId: "" },
         showForm: true
       };
       const actual = reducer(actualState, act.toggleShowForm());
@@ -329,7 +337,7 @@ describe("state", () => {
         form: {
           artist: "",
           title: "",
-          url: ""
+          videoId: ""
         },
         showForm: false
       };

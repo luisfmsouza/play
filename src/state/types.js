@@ -5,5 +5,5 @@ export const SELECT_VIDEO = "SELECT_VIDEO";
 export const SELECT_PLAYLIST = "SELECT_PLAYLIST";
 export const SET_ARTIST = "SET_ARTIST";
 export const SET_TITLE = "SET_TITLE";
-export const SET_URL = "SET_URL";
+export const SET_VIDEO_ID = "SET_VIDEO_ID";
 export const TOGGLE_SHOW_FORM = "TOGGLE_SHOW_FORM";
