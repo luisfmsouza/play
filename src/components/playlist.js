@@ -20,7 +20,7 @@ const Title = styled.h3`
   text-transform: uppercase;
 `;
 
-const Button = styled.button`
+const PlaylistLink = styled.button`
   border: none;
   background-color: ${({ theme }) => theme.colors.skyLight};
   color: ${({ theme }) => theme.colors.inkLighter};
@@ -54,12 +54,12 @@ const Overlay = styled.div`
   }
 `;
 
-const Video = styled.span`
+const OverlayText = styled.span`
   font-size: 12px;
   color: #fff2fc;
 `;
 
-const AddVideoPlaylist = styled.button`
+const AddButton = styled.button`
   background: transparent;
   border: none;
   background-color: ${({ theme }) => theme.colors.ink};
@@ -90,12 +90,10 @@ const Playlist = ({
     <>
       <Title>Playlists</Title>
       <Container>
-        <AddVideoPlaylist onClick={addPlaylist}>
-          + add playlist
-        </AddVideoPlaylist>
+        <AddButton onClick={addPlaylist}>+ add playlist</AddButton>
         <List>
           {playlists.map((playlist, index) => (
-            <Button key={index} onClick={() => selectPlaylist(index)}>
+            <PlaylistLink key={index} onClick={() => selectPlaylist(index)}>
               {playlist[0] ? (
                 <Thumbnail
                   src={`https://img.youtube.com/vi/${playlist[0].videoId}/default.jpg`}
@@ -106,10 +104,10 @@ const Playlist = ({
               )}
               {index !== currentPlaylist && (
                 <Overlay>
-                  <Video>Play {playlist.length} videos</Video>
+                  <OverlayText>Play {playlist.length} videos</OverlayText>
                 </Overlay>
               )}
-            </Button>
+            </PlaylistLink>
           ))}
         </List>
       </Container>

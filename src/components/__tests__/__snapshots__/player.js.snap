@@ -2,7 +2,7 @@
 
 exports[`Player component when does not have playlists nor videos renders add playlist button component 1`] = `
 <button
-  className="sc-kAzzGY lmUEGD"
+  className="sc-kgoBCf bqKepH"
   onClick={[Function]}
 >
   + Add your first playlist
@@ -70,80 +70,80 @@ exports[`Player component when does not have video on selected playlist renders 
 
 exports[`Player component when there is playlists and videos renders default component 1`] = `
 <div
-  className="sc-ifAKCX iIcWva"
+  className="sc-gZMcBi fZVuvt"
 >
   <div
-    className="sc-EHOje gFIemQ"
+    className="sc-gqjmRU kbqIjb"
   >
     <div
-      className="sc-kgoBCf bYvUEh"
+      className="sc-VigVT fZcnhv"
     />
   </div>
   <div
-    className="sc-jzJRlG gCenpR"
+    className="sc-jTzLTM bEyCSz"
   >
     <h1
-      className="sc-gZMcBi eFUkCr"
+      className="sc-fjdhpX htvWHB"
     >
       Title 2
     </h1>
     <h2
-      className="sc-gqjmRU dniKdl"
+      className="sc-jzJRlG eqPGrl"
     >
       Artist 2
     </h2>
   </div>
   <div
-    className="sc-bZQynM fLiCiD"
+    className="sc-ifAKCX iwwMpc"
   >
     <h3
-      className="sc-gzVnrw gwisOI"
+      className="sc-EHOje Ialwt"
     >
       Videos
     </h3>
     <button
-      className="sc-htoDjs bFFuJY"
+      className="sc-bZQynM fhCRdn"
       onClick={[Function]}
     >
       <div
-        className="sc-dnqmqq hOKQLU"
+        className="sc-gzVnrw hGpAmX"
       >
         <img
-          className="sc-iwsKbI hsExMc"
+          className="sc-htoDjs guEPrW"
           src="https://img.youtube.com/vi/MeSu5_Do8P8/default.jpg"
           width="100"
         />
         <p
-          className="sc-VigVT dMUWxt"
+          className="sc-dnqmqq erXrcf"
         >
           Title 1
         </p>
         <p
-          className="sc-jTzLTM ijUaSo"
+          className="sc-iwsKbI bkiwKW"
         >
           Artist 1
         </p>
       </div>
     </button>
     <button
-      className="sc-htoDjs bFFuJY"
+      className="sc-bZQynM fhCRdn"
       onClick={[Function]}
     >
       <div
-        className="sc-dnqmqq gDPkJq"
+        className="sc-gzVnrw gjBSIs"
       >
         <img
-          className="sc-iwsKbI hsExMc"
+          className="sc-htoDjs guEPrW"
           src="https://img.youtube.com/vi/249i5jNRClU/default.jpg"
           width="100"
         />
         <p
-          className="sc-VigVT dMUWxt"
+          className="sc-dnqmqq erXrcf"
         >
           Title 2
         </p>
         <p
-          className="sc-jTzLTM ijUaSo"
+          className="sc-iwsKbI bkiwKW"
         >
           Artist 2
         </p>
@@ -151,10 +151,10 @@ exports[`Player component when there is playlists and videos renders default com
     </button>
   </div>
   <div
-    className="sc-cSHVUG fwLHbJ"
+    className="sc-kAzzGY bNeUfc"
   >
     <button
-      className="sc-fjdhpX jptjDL"
+      className="sc-cSHVUG grszef"
       onClick={[Function]}
     >
       + add new video
