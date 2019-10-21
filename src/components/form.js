@@ -51,7 +51,7 @@ const Form = ({
   artist,
   title,
   videoId,
-  hasPlaylists,
+  playlists,
   setArtist,
   setTitle,
   setVideoId,
@@ -74,6 +74,8 @@ const Form = ({
 
     addVideo();
   };
+
+  const hasPlaylists = Boolean(playlists);
 
   if (hasPlaylists) {
     return (

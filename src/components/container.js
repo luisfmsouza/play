@@ -16,7 +16,7 @@ export const formContainer = connect(
     artist: state.form.artist,
     title: state.form.title,
     videoId: state.form.videoId,
-    hasPlaylists: Boolean(state.playlists)
+    playlists: state.playlists
   }),
   {
     setArtist,
@@ -28,7 +28,8 @@ export const formContainer = connect(
 
 export const playerContainer = connect(
   state => ({
-    playlist: state.playlists && state.playlists[state.currentPlaylist],
+    playlists: state.playlists,
+    currentPlaylist: state.currentPlaylist,
     currentVideo: state.currentVideo,
     showForm: state.showForm
   }),

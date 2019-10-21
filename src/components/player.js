@@ -172,7 +172,8 @@ const StyledYouTube = styled(YouTube)`
 `;
 
 const Player = ({
-  playlist,
+  playlists,
+  currentPlaylist,
   currentVideo,
   showForm,
   selectVideo,
@@ -180,6 +181,7 @@ const Player = ({
   addPlaylist,
   nextVideo
 }) => {
+  const playlist = playlists && playlists[currentPlaylist];
   const hasPlaylist = Boolean(playlist);
   const hasVideo = hasPlaylist && Boolean(playlist.length);
 
