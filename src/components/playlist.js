@@ -98,7 +98,7 @@ const Playlist = ({
             <Button key={index} onClick={() => selectPlaylist(index)}>
               {playlist[0] ? (
                 <Thumbnail
-                  src={`https://img.youtube.com/vi/${playlist[0].url}/default.jpg`}
+                  src={`https://img.youtube.com/vi/${playlist[0].videoId}/default.jpg`}
                   height="118"
                 />
               ) : (

@@ -34,12 +34,12 @@ describe("Player component", () => {
             {
               artist: "Artist 1",
               title: "Title 1",
-              url: "https://www.youtube.com/embed/MeSu5_Do8P8"
+              videoId: "MeSu5_Do8P8"
             },
             {
               artist: "Artist 2",
               title: "Title 2",
-              url: "https://www.youtube.com/embed/249i5jNRClU"
+              videoId: "249i5jNRClU"
             }
           ],
           [],
@@ -47,30 +47,30 @@ describe("Player component", () => {
             {
               artist: "Artist 3",
               title: "Title 3",
-              url: "https://www.youtube.com/embed/qSeaR7Dqvdc"
+              videoId: "qSeaR7Dqvdc"
             },
             {
               artist: "Artist 4",
               title: "Title 4",
-              url: "https://www.youtube.com/embed/Dw5orx_47uY"
+              videoId: "Dw5orx_47uY"
             },
             {
               artist: "Artist 5",
               title: "Title 5",
-              url: "https://www.youtube.com/embed/sNFndSeEt0w"
+              videoId: "sNFndSeEt0w"
             }
           ],
           [
             {
               artist: "Artist 6",
               title: "Title 6",
-              url: "https://www.youtube.com/embed/ykHiSn1K1E"
+              videoId: "ykHiSn1K1E"
             }
           ]
         ],
         currentPlaylist: 0,
         currentVideo: 1,
-        form: { artist: "", title: "", url: "" },
+        form: { artist: "", title: "", videoId: "" },
         showForm: false
       };
 
@@ -86,7 +86,7 @@ describe("Player component", () => {
         playlists: null,
         currentPlaylist: null,
         currentVideo: null,
-        form: { artist: "", title: "", url: "" },
+        form: { artist: "", title: "", videoId: "" },
         showForm: false
       };
 
@@ -102,7 +102,7 @@ describe("Player component", () => {
         playlists: [[]],
         currentPlaylist: 0,
         currentVideo: null,
-        form: { artist: "", title: "", url: "" },
+        form: { artist: "", title: "", videoId: "" },
         showForm: true
       };
 

@@ -2,7 +2,7 @@ import { connect } from "react-redux";
 import {
   setArtist,
   setTitle,
-  setUrl,
+  setVideoId,
   selectVideo,
   addVideo,
   addPlaylist,
@@ -15,13 +15,13 @@ export const formContainer = connect(
   state => ({
     artist: state.form.artist,
     title: state.form.title,
-    url: state.form.url,
+    videoId: state.form.videoId,
     hasPlaylists: Boolean(state.playlists)
   }),
   {
     setArtist,
     setTitle,
-    setUrl,
+    setVideoId,
     addVideo
   }
 );

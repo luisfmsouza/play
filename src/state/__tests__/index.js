@@ -274,10 +274,7 @@ describe("state", () => {
         currentVideo: 0,
         form: { artist: "", title: "", videoId: "" }
       };
-      const actual = reducer(
-        actualState,
-        act.setVideoId("https://www.youtube.com/watch?v=JPJjwHAIny4")
-      );
+      const actual = reducer(actualState, act.setVideoId("JPJjwHAIny4"));
 
       const expected = {
         playlists: [[video, video, video]],
@@ -286,7 +283,7 @@ describe("state", () => {
         form: {
           artist: "",
           title: "",
-          videoId: "https://www.youtube.com/watch?v=JPJjwHAIny4"
+          videoId: "JPJjwHAIny4"
         }
       };
 

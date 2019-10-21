@@ -50,11 +50,11 @@ const Button = styled.button`
 const Form = ({
   artist,
   title,
-  url,
+  videoId,
   hasPlaylists,
   setArtist,
   setTitle,
-  setUrl,
+  setVideoId,
   addVideo
 }) => {
   const handleArtistChange = event => {
@@ -65,8 +65,8 @@ const Form = ({
     setTitle(event.target.value);
   };
 
-  const handleUrlChange = event => {
-    setUrl(event.target.value);
+  const handleVideoIdChange = event => {
+    setVideoId(event.target.value);
   };
 
   const handleSubmitForm = event => {
@@ -95,13 +95,13 @@ const Form = ({
             value={title}
             onChange={handleTitleChange}
           />
-          <Label htmlFor="url">URL:</Label>
+          <Label htmlFor="videoId">Youtube video ID:</Label>
           <Input
-            id="url"
+            id="videoId"
             required
             type="text"
-            value={url}
-            onChange={handleUrlChange}
+            value={videoId}
+            onChange={handleVideoIdChange}
           />
           <Button type="submit">Add video</Button>
         </form>

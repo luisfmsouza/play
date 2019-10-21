@@ -4,7 +4,7 @@ exports[`Form component when does not have playlists does not render the Form 1`
 
 exports[`Form component when there is playlists renders default component 1`] = `
 <div
-  className="sc-bdVaJa hxIwds"
+  className="sc-bdVaJa fKgYJA"
 >
   <form
     onSubmit={[Function]}
@@ -39,17 +39,17 @@ exports[`Form component when there is playlists renders default component 1`] = 
     />
     <label
       className="sc-bwzfXH dnbGwd"
-      htmlFor="url"
+      htmlFor="videoId"
     >
-      URL:
+      Youtube video ID:
     </label>
     <input
       className="sc-htpNat gBBCDj"
-      id="url"
+      id="videoId"
       onChange={[Function]}
       required={true}
       type="text"
-      value="https://url.com"
+      value="PtqAzo6ElhY"
     />
     <button
       className="sc-bxivhb dJVtKI"

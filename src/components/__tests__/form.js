@@ -32,7 +32,7 @@ describe("Form component", () => {
         playlists: [[]],
         currentPlaylist: 0,
         currentVideo: null,
-        form: { artist: "artist", title: "title", url: "https://url.com" },
+        form: { artist: "artist", title: "title", videoId: "PtqAzo6ElhY" },
         showForm: true
       };
 
@@ -48,7 +48,7 @@ describe("Form component", () => {
         playlists: null,
         currentPlaylist: null,
         currentVideo: null,
-        form: { artist: "", title: "", url: "" },
+        form: { artist: "", title: "", videoId: "" },
         showForm: false
       };
 

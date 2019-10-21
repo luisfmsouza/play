@@ -46,13 +46,13 @@ exports[`Player component when does not have video on selected playlist renders 
     />
     <label
       className="sc-bwzfXH dnbGwd"
-      htmlFor="url"
+      htmlFor="videoId"
     >
-      URL:
+      Youtube video ID:
     </label>
     <input
       className="sc-htpNat gBBCDj"
-      id="url"
+      id="videoId"
       onChange={[Function]}
       required={true}
       type="text"
@@ -110,7 +110,7 @@ exports[`Player component when there is playlists and videos renders default com
       >
         <img
           className="sc-iwsKbI hsExMc"
-          src="https://img.youtube.com/vi/https://www.youtube.com/embed/MeSu5_Do8P8/default.jpg"
+          src="https://img.youtube.com/vi/MeSu5_Do8P8/default.jpg"
           width="100"
         />
         <p
@@ -134,7 +134,7 @@ exports[`Player component when there is playlists and videos renders default com
       >
         <img
           className="sc-iwsKbI hsExMc"
-          src="https://img.youtube.com/vi/https://www.youtube.com/embed/249i5jNRClU/default.jpg"
+          src="https://img.youtube.com/vi/249i5jNRClU/default.jpg"
           width="100"
         />
         <p

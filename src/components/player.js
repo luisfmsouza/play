@@ -188,7 +188,7 @@ const Player = ({
       <Container>
         <PlayerContent>
           <StyledYouTube
-            video={playlist[currentVideo].url}
+            video={playlist[currentVideo].videoId}
             autoplay
             showRelatedVideos={false}
             showInfo={false}
@@ -209,11 +209,11 @@ const Player = ({
 
         <List>
           <SectionTitle>Videos</SectionTitle>
-          {playlist.map(({ artist, title, url }, index) => (
+          {playlist.map(({ artist, title, videoId }, index) => (
             <VideoButton key={index} onClick={() => selectVideo(index)}>
               <Item active={index === currentVideo}>
                 <Thumbnail
-                  src={`https://img.youtube.com/vi/${url}/default.jpg`}
+                  src={`https://img.youtube.com/vi/${videoId}/default.jpg`}
                   width="100"
                 />
 
